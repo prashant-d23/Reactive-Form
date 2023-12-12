@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+}
+
+table,th,td{
+  text-align: center;
+  border: 1px solid rgb(116, 67, 241);
+}
+
+.loading{
+  position: absolute;
+  left: 45%;
+  top: 45%;
+}

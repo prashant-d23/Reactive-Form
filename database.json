@@ -1,0 +1,56 @@
+{
+  "users": [
+    {
+      "fullName": "Prashant Deshpande",
+      "email": "ironman6335@gmail.com",
+      "password": "123@Pass",
+      "confirmPassword": "123@Pass",
+      "address": "fdfdf",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "udgir",
+      "pinCode": "1234",
+      "phoneNumber": "+9170384839283",
+      "id": 1
+    },
+    {
+      "fullName": "Chris Evans",
+      "email": "captain@gmail.com",
+      "password": "Cap@shield",
+      "confirmPassword": "Cap@shield",
+      "address": "New York streets",
+      "country": "United States",
+      "state": "New York",
+      "city": "abcd",
+      "pinCode": "413517",
+      "phoneNumber": "+1123456789",
+      "id": 2
+    },
+    {
+      "fullName": "Stephen Strange",
+      "email": "strange@gmail.com",
+      "password": "Magic@123",
+      "confirmPassword": "Magic@123",
+      "address": "abcd",
+      "country": "Australia",
+      "state": "Queensland",
+      "city": "victoria",
+      "pinCode": "413517",
+      "phoneNumber": "+614578648937",
+      "id": 3
+    },
+    {
+      "fullName": "Prashant Deshpande",
+      "email": "ironman6335@gmail.com",
+      "password": "123@Pass",
+      "confirmPassword": "123@Pass",
+      "address": "abv",
+      "country": "India",
+      "state": "Maharashtra",
+      "city": "udgir",
+      "pinCode": "413517",
+      "phoneNumber": "+9170384839283",
+      "id": 4
+    }
+  ]
+}

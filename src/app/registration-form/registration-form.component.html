@@ -1,0 +1,117 @@
+
+
+<div class="container mt-5 mb-5 bg-info p-4 w-50 ">
+  <h2 class="text-center fw-bold">User Registration Form</h2>
+  <form [formGroup]="registrationForm" (ngSubmit)="saveForm()">
+    <!-- full Name  -->
+    <div class="mb-3">
+      <label for="fName" class="form-label">Full Name</label>
+      <input type="text" class="form-control" id="fName" name="fullName" formControlName="fullName">
+
+      <div class="row" *ngIf="firstName?.touched && firstName?.invalid">
+        <div class="invalid-feedback d-block" *ngIf="firstName?.errors?.['required']">This field is required</div>
+      </div>
+    </div>
+
+    <!-- email  -->
+    <div class="mb-3">
+      <label for="id4" class="form-label">Email</label>
+      <input type="text" class="form-control" name="email" id="id4" formControlName="email">
+
+      <div class="row" *ngIf="email?.touched && email?.invalid">
+        <div class="invalid-feedback d-block" *ngIf="email?.errors?.['required']">This field is required</div>
+        <div class="invalid-feedback d-block" *ngIf="email?.errors?.['pattern']">Enter a Valid Email</div>
+      </div>
+    </div>
+
+    <!-- password  -->
+    <div class="row mt-3 mb-3">
+      <div class="col-md-6">
+        <label for="pwd" class="form-label">Password</label>
+        <input type="text" class="form-control" name="pwd" id="pwd" formControlName="password">
+
+        <div class="row" *ngIf="password?.invalid && password?.touched">
+          <div class="invalid-feedback d-block" *ngIf="password?.errors?.['required']">This field is required</div>
+          <div class="invalid-feedback d-block" *ngIf="password?.errors?.['pattern']">Include atleast 1 special Character and 1 Uppercase letter</div>
+        </div>
+        <div class="row" *ngIf="password?.invalid && password?.dirty">
+          <div class="invalid-feedback d-block" *ngIf="password?.errors?.['minLength']">Password must contain 8 characters</div>
+        </div>
+      </div>
+
+      <!-- confirmPassword  -->
+      <div class="col-md-6">
+        <label for="cpwd" class="form-label">Confirm Password</label>
+        <input type="text" class="form-control" name="confirmpwd" id="cpwd" formControlName="confirmPassword">
+
+        <div class="row" *ngIf="confirmPassword?.invalid && confirmPassword?.touched">
+          <div class="invalid-feedback d-block" *ngIf="confirmPassword?.errors?.['required']">This field is required</div>
+          <div class="invalid-feedback d-block" *ngIf="confirmPassword?.errors?.['passwordNotMatch']">Password doesn't match</div>
+        </div>
+      </div>
+    </div>
+
+       <!-- address  -->
+    <div class="mb-3">
+      <label for="add" class="form-label">Adress</label>
+      <textarea name="address" id="add" cols="30" rows="1" class="form-control" formControlName="address"></textarea>
+    </div>
+
+    <!-- country -->
+    <div class="mb-3">
+      <label for="country" class="form-label">Country</label>
+      <select name="country" id="country" class="form-control" formControlName="country">
+        <option value="">Select Country</option>
+        <option *ngFor="let country of countries">{{country}}</option>
+      </select>
+    </div>
+
+    <!-- state  -->
+    <div class="mb-3">
+      <label for="state" class="form-label">State</label>
+      <select name="state" id="state" class="form-control" formControlName="state">
+        <option value="">Select State</option>
+        <option *ngFor="let state of states">{{state}}</option>
+      </select>
+    </div>
+
+
+      <!-- city  -->
+      <div class="mb-3">
+        <label for="city" class="form-label">City</label>
+        <input type="text" name="city" id="city" class="form-control" formControlName="city" required>
+
+        <div class="row" *ngIf="city?.invalid && city?.touched">
+          <div class="invalid-feedback d-block" *ngIf="city?.errors?.['required']">This field if required</div>
+        </div>
+      </div>
+
+      <!-- pincode  -->
+      <div class="mb-3">
+        <label for="pin" class="form-label">PinCode</label>
+        <input type="text" name="pincode" id="pin" class="form-control" formControlName="pinCode" required>
+
+        <div class="row" *ngIf="pinCode?.invalid && pinCode?.touched">
+          <div class="invalid-feedback d-block" *ngIf="pinCode?.errors?.['required']">This field if required</div>
+        </div>
+      </div>
+
+       <!-- phoneNumber  -->
+       <div class="mb-3">
+        <label for="id3" class="form-label">Phone Number</label>
+      <input type="text" class="form-control" name="ph" id="id3" formControlName="phoneNumber">
+
+      <div class="row" *ngIf="phoneNumber?.invalid && phoneNumber?.touched">
+        <div class="invalid-feedback d-block" *ngIf="phoneNumber?.errors?.['required']">This field is required</div>
+      </div>
+      </div>
+
+
+
+    <button type="submit" class="btn btn-primary mt-2" [disabled]="registrationForm.invalid" routerLink="/user-list" >Submit</button>
+  </form>
+</div>
+
+
+
+
